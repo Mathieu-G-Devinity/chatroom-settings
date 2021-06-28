@@ -1,0 +1,56 @@
+@import 'src/styles/vars';
+
+.messages {
+  padding: 2rem;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+
+  .message {
+    text-align: right;
+    margin-bottom: 2rem;
+
+    &--own{
+      text-align: left;
+
+      .message__author::after {
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+    }
+
+    &__author {
+      margin:0 2rem;
+      animation: fade 1s ease 0s 1;
+      
+      &::after {
+        content: "";
+        margin-left: auto;
+        display:block;
+        width:0;
+        border-bottom: 1rem solid $light-color;
+        border-left: 1rem solid transparent;
+      }
+    }
+
+    &__content {
+      border-radius: 2rem;
+      padding: 1.5rem;
+      background-color: $light-color;
+      color: $normal-blue;
+      display: inline-block;
+      min-width: 10em;
+      text-align: left;
+      // l'animation à jouer :
+      // - s'appelle grow
+      // - dure 0.3s
+      // - utilse une fonction de progression de type ease in
+      // - démarrre dès l'apparition de l'élément (délai de 0s)
+      // - est jouée 1 fois
+      animation: grow .3s $ease-out-back 0s 1;
+      transform-origin: 50% 0;
+    }
+  }
+}

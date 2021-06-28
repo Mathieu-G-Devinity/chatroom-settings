@@ -1,0 +1,76 @@
+.container-form {
+  display: flex;
+  flex-wrap: wrap;
+  position:fixed;
+  top: 0px;
+  right: 0px;
+  margin: 2em;
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.container-form-hidden {
+  transform: translateX(90%);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-wrap: wrap;
+  position:fixed;
+  top: 0px;
+  right: 1em;
+  margin: 1em;
+}
+
+.connect-form, .form-hide-show {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;  
+}
+
+.connect-button-hidden {
+  transform: rotate(45deg);
+  margin-top: 0.2em;
+  margin-right: 0.5em;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 0;
+  color: #5300ff;
+  font-weight: 400;
+  font-size: 2em;
+}
+
+.connect-button-hidden:hover, .connect-button:hover {
+  transform: scale(1.2);
+}
+
+
+.connect-button {
+  transform: rotate(45deg);
+  margin-right: 0.5em;
+  margin-top: 0.2em;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 0;
+  color: #5300ff;
+  font-weight: 400;
+  font-size: 2em;
+  padding: 0;
+}
+
+.connect-form-email, .connect-form-password {
+  margin: 0.5em;
+  border-radius: 0.5em;
+  border: 0;
+  padding: 1em;
+}
+
+.connect-button-submit {
+  margin: 0.5em;
+  border-radius: 0.4em;
+  background-color: #5300ff;
+  border: 0;
+  padding: 1em;
+  color: white;
+}
+
